@@ -1,0 +1,121 @@
+@font-face {
+   font-family: "vodafoneLT";
+   font-family: vodafoneBold;
+   src: url(../fonts/vodafone-light.woff);
+}
+
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'vodafoneLT';
+  padding: 0;
+  margin: 0;
+}
+
+#header img{
+  content:url("../images/cabecera_mobile@3x.jpg");
+  width: 100%;
+  height: fit-content;
+}
+
+#mainSection {
+  background-color: #333;
+  font-family: vodafoneBold;
+  text-align: center;
+  color: #fff;
+  padding: 32px 10px 26px 10px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 100;
+  margin: 49,8px;
+}
+
+#menu {
+  display: none;
+}
+
+/* CAROUSEL */
+#carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  height: 292px;
+  border: solid 1px #999;
+
+}
+
+.carouselItem img{
+  height: 50%;
+}
+
+.carouselItem div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+#sectionInfo div{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  text-align: left;
+  font-size: 16px;
+}
+
+#sectionInfo h1{
+  padding: 54px 0 37px 0;
+ 
+}
+
+
+@media (min-width:768px) and (max-width: 1200px) {
+  #header {
+    content:url("../images/cabecera_tablet@3x.jpg");
+    width: 100%;
+    height: fit-content;
+  }
+
+  #sectionInfo div{
+    flex-direction: row;
+  }
+} 
+
+@media all and (min-width:1200px) {
+  #header {
+    content:url("../images/cabecera_pc@2x.png");
+    width: 100%;
+    height: fit-content;
+    
+  }
+  
+  #menu {
+    background-color: #666666;
+    width: 100%;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+
+  }
+
+  #menu span:first-child {
+    margin: 0 15px 0 71px;
+    font-size: 16px;
+  
+  } 
+} 
+
