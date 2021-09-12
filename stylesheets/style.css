@@ -1,18 +1,26 @@
+/* FONTS  */
 @font-face {
    font-family: "vodafoneLT";
-   font-family: vodafoneBold;
-   src: url(../fonts/vodafone-light.woff);
+   src: url(../fonts/VodafoneLt-Regular.woff);
 }
 
+@font-face {
+  font-family: "vodafoneRg";
+  src: url(../fonts/VodafoneRg.woff);
+}
 
+.bold-text{
+  font-weight: bold;
+}
+
+/* RESET  */
+* { margin: 0; padding: 0; }
+
+/* STRUCTURE  */
 html {
   font-size: 14px;
-}
-
-body {
-  font-family: 'vodafoneLT';
-  padding: 0;
-  margin: 0;
+  font-family: "vodafoneRg";
+  color: #fff;
 }
 
 #header img{
@@ -21,18 +29,16 @@ body {
   height: fit-content;
 }
 
-#mainSection {
+#main-section {
   background-color: #333;
-  font-family: vodafoneBold;
-  text-align: center;
-  color: #fff;
-  padding: 32px 10px 26px 10px;
 }
 
-.sectionTitle {
+.section-title {
+  font-family: "vodafoneLT";
   font-size: 36px;
   font-weight: 100;
-  margin: 49,8px;
+  padding: 32px 10px 28px 10px;
+  text-align: center;
 }
 
 #menu {
@@ -59,28 +65,35 @@ body {
   height: 50%;
 }
 
-.carouselItem div {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-}
-
-#sectionInfo div{
+#section-info-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: space-evenly;
-  text-align: left;
-  font-size: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
-#sectionInfo h1{
-  padding: 54px 0 37px 0;
- 
+#check-list-box {
+  font-family: "vodafoneRg";
+  align-items: center;
+  width: 90%;
+  font-size: 18px;
+}
+
+#check-list-box li{
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+#section-info-container img {
+  width: 26px;
+  padding-right: 12px;
 }
 
 
+
+
+/* TABLET STYLES  */
 @media (min-width:768px) and (max-width: 1200px) {
   #header {
     content:url("../images/cabecera_tablet@3x.jpg");
@@ -88,11 +101,28 @@ body {
     height: fit-content;
   }
 
-  #sectionInfo div{
-    flex-direction: row;
+  .section-title {
+    font-size: 40px;
+    font-weight: 100;
+    padding: 40px 75px 35px 75px;
   }
+
+  #check-list-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  #check-list-box ul {
+    width: 45%;
+  }
+
+
 } 
 
+/* PC STYLES  */
 @media all and (min-width:1200px) {
   #header {
     content:url("../images/cabecera_pc@2x.png");
@@ -115,7 +145,18 @@ body {
   #menu span:first-child {
     margin: 0 15px 0 71px;
     font-size: 16px;
-  
   } 
+
+  #check-list-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 22px;
+  }
+
+  #check-list-box ul {
+    width: 40%;
+  }
 } 
 
